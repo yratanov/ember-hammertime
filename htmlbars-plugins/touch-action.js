@@ -146,7 +146,7 @@ function sexpr(node) {
 function setConfigValues(config) {
   config = config || {};
 
-  touchActionOnAction = config.touchActionOnAction || touchActionOnAction;
+  touchActionOnAction = typeof config.touchActionOnAction === 'undefined' ? touchActionOnAction : config.touchActionOnAction;
   touchActionAttributes = config.touchActionAttributes || touchActionAttributes;
   touchActionSelectors = config.touchActionSelectors || touchActionSelectors;
   touchActionProperties = config.touchActionProperties || touchActionProperties;
